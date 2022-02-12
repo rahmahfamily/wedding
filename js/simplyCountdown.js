@@ -211,6 +211,7 @@
                     seconds = 0;
                     window.clearInterval(interval);
                     parameters.onEnd();
+                    countdown.innerHTML = 'Terima kasih atas doa dan partisipasi anda :)'
                 }
 
                 if (parameters.plural) {
@@ -268,18 +269,3 @@
 
     exports.simplyCountdown = simplyCountdown;
 }(window));
-
-/*global $, jQuery, simplyCountdown*/
-if (window.jQuery) {
-    (function ($, simplyCountdown) {
-        'use strict';
-
-        function simplyCountdownify(el, options) {
-            simplyCountdown(el, options);
-        }
-
-        $.fn.simplyCountdown = function (options) {
-            return simplyCountdownify(this.selector, options);
-        };
-    }(jQuery, simplyCountdown));
-}
