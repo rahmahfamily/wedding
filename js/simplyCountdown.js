@@ -211,7 +211,6 @@
                     seconds = 0;
                     window.clearInterval(interval);
                     parameters.onEnd();
-                    countdown.innerHTML = 'Terima kasih atas doa dan partisipasi anda :)'
                 }
 
                 if (parameters.plural) {

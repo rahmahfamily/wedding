@@ -79,9 +79,13 @@
 						<div class="display-t">
 							<div class="display-tc animate-box" data-animate-effect="fadeIn">
 								<h1>Atika &amp; Yoga</h1>
-								<div class="simply-countdown simply-countdown-one">
+								<div id="countdown" class="simply-countdown simply-countdown-one">
 									<h2>We Are Getting Married</h2>
-									<p><a href="#" class="btn btn-default btn-sm">Save the date</a></p>
+									<p><a href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MnFpZWdlN2E2cnZwaTBjc29tNWFkZ2JjbTggZzU3dnY3a2lxNWN0ZzlpYjF2cjluY2l0MGNAZw&tmsrc=g57vv7kiq5ctg9ib1vr9ncit0c%40group.calendar.google.com" class="btn btn-default btn-sm" target="_blank">Save the date</a></p>
+								</div>
+								<div id="livestream" class="row animate-box" style="display: none;">
+									<h2>The Wedding</h2>
+									<iframe src="https://www.youtube.com/embed/GFZL528rop0" style="border:0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
 								</div>
 							</div>
 						</div>
@@ -438,7 +442,7 @@
 		<script>
 			// var d = new Date("2022-05-28T08:00:00+07:00");
 
-			var d = new Date(Date.now() + 10000);
+			var d = new Date(Date.now() + 5000);
 
 			// default example
 			simplyCountdown('.simply-countdown-one', {
@@ -448,7 +452,13 @@
 					hours: d.getHours(),
 					minutes: d.getMinutes(),
 					seconds: d.getSeconds(),
-					enableUtc: false
+					enableUtc: false,
+					onEnd: function() {
+						var countdown = document.getElementById('countdown');
+						var livestream = document.getElementById('livestream');
+						countdown.style.display = 'none';
+						livestream.style.display = 'block';
+					}
 			});
 		</script>
 		<script>
