@@ -103,10 +103,10 @@
 			loop: true,
 			margin: 0,
 			responsiveClass: true,
-			nav: false,
-			dots: true,
+			nav: true,
+			dots: false,
 			smartSpeed: 800,
-			autoHeight: true,
+			autoHeight: false,
 		});
 	};
 
