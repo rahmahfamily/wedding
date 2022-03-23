@@ -726,12 +726,9 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-gallery-list li.one-third {
-  width: 32.3%;
-}
-@media screen and (max-width: 768px) {
-  #fh5co-gallery-list li.one-third {
-    width: 49%;
-  }
+  width: 49%;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 480px) {
   #fh5co-gallery-list li.one-third {
