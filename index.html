@@ -218,13 +218,23 @@
 								<input name="name" class="form-control" id="name" placeholder="Name" maxlength="25" required>
 							</div>
 							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input name="email" class="form-control" id="email" placeholder="Email" required>
+							</div>
+							<div class="form-group">
+								<select class="form-control" name="referrer" id="referrer" placeholder="Relation" required>
+									<option disabled selected value>Referrer</option>
+									<option value="Atika">Atika</option>
+									<option value="Yoga">Yoga</option>
+								</select>
+							</div>
+							<div class="form-group">
 								<label for="testimony" class="sr-only">Testimony</label>
 								<textarea rows="5" name="testimony" class="form-control" id="testimony" placeholder="Testimony" style="resize: none;"></textarea>
 							</div>
 							<div class="form-group">
-								<label for="attending">Attending?</label>
 								<select class="form-control" name="attending" id="attending" placeholder="Attending?" required>
-									<option disabled selected value></option>
+									<option disabled selected value>Attending?</option>
 									<option value="Yes">Yes</option>
 									<option value="No">No</option>
 								</select>
@@ -246,7 +256,7 @@
 			</div>
 		</div>
 
-		<div id="fh5co-testimonial">
+		<div id="fh5co-testimonial" style="display: none;">
 			<div class="container">
 				<div class="row">
 					<div class="row animate-box">
@@ -258,31 +268,7 @@
 					<div class="row">
 						<div class="col-md-12 animate-box">
 							<div class="wrap-testimony">
-								<div class="owl-carousel-fullwidth">
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<span>John Doe</span>
-											<blockquote>
-												<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics"</p>
-											</blockquote>
-										</div>
-									</div>
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<span>John Doe</span>
-											<blockquote>
-												<p>"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, at the coast of the Semantics, a large language ocean."</p>
-											</blockquote>
-										</div>
-									</div>
-									<div class="item">
-										<div class="testimony-slide active text-center">
-											<span>John Doe</span>
-											<blockquote>
-												<p>"Far far away, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean."</p>
-											</blockquote>
-										</div>
-									</div>
+								<div class="owl-carousel-fullwidth" id="owl-testimony">
 								</div>
 							</div>
 						</div>
@@ -299,7 +285,19 @@
 						<p>We are more than happy to receive gifts.</p>
 						<button class="btn btn-default btn-block collapsible">See our wishlist</button>
 						<div class="collapsible-content">
-							this is our wishlist
+							<div class="row row-bottom-padded-md">
+								<div class="col-md-12">
+									<ul id="fh5co-gallery-list">
+										<li class="one-third animate-box" data-animate-effect="fadeIn" style="background-image: url(images/gallery-1.jpg); "> 
+											<a href="images/gallery-1.jpg">
+												<div class="case-studies-summary">
+													<span>DANA - Yoga</span>
+												</div>
+											</a>
+										</li>
+									</ul>		
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -413,65 +411,6 @@
 		<script src="js/simplyCountdown.js"></script>
 		<!-- Main -->
 		<script src="js/main.js"></script>
-
-		<script>
-			// var d = new Date("2022-05-28T08:00:00+07:00");
-
-			var d = new Date(Date.now() + 5000);
-
-			// default example
-			simplyCountdown('.simply-countdown-one', {
-					year: d.getFullYear(),
-					month: d.getMonth() + 1,
-					day: d.getDate(),
-					hours: d.getHours(),
-					minutes: d.getMinutes(),
-					seconds: d.getSeconds(),
-					enableUtc: false,
-					onEnd: function() {
-						var countdown = document.getElementById('countdown');
-						var livestream = document.getElementById('livestream');
-						countdown.style.display = 'none';
-						livestream.style.display = 'block';
-					}
-			});
-		</script>
-		<script>
-			var responseContainer = document.getElementById('responseContainer');
-			var formContainer = document.getElementById('formContainer');
-			window.addEventListener("load", function() {
-				const form = document.getElementById('rsvp');
-				form.addEventListener("submit", function(e) {
-					e.preventDefault();
-					const data = new FormData(form);
-					const action = e.target.action;
-					fetch(action, {
-						method: 'POST',
-						body: data,
-					})
-					.then(() => {
-						formContainer.style.display = 'none';
-						responseContainer.style.display = 'block';
-					})
-				});
-			});
-		</script>
-		<script>
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-				coll[i].addEventListener("click", function() {
-					this.classList.toggle("active");
-					var content = this.nextElementSibling;
-					if (content.style.maxHeight){
-						content.style.maxHeight = null;
-					} else {
-						content.style.maxHeight = content.scrollHeight + "px";
-					} 
-				});
-			}
-		</script>
 	</body>
 </html>
 
