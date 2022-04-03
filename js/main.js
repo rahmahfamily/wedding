@@ -251,6 +251,9 @@
 							dots: false,
 							smartSpeed: 800,
 							autoHeight: false,
+							autoplay:true,
+							autoplayTimeout:5000,
+							autoplayHoverPause:true
 						});
 					}
 				}
