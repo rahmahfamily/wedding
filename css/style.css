@@ -362,7 +362,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .display-tc,
 #fh5co-event .display-t,
 #fh5co-event .display-tc {
-  height: 700px;
+  padding-bottom: 20px;
   display: table;
   width: 100%;
 }
@@ -1874,9 +1874,9 @@ form label {
 .video-container iframe {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
 }
 
 /*# sourceMappingURL=style.css.map */

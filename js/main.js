@@ -222,7 +222,7 @@
 					var testi = document.getElementById('fh5co-testimonial')
 					testi.style.display = 'block';
 					for (var i in data.data) {
-						var item, subItem, people, testi, paragraph;
+						var item, subItem, people, testi, paragraph, relation;
 						var owlDiv = document.getElementById('owl-testimony')
 						item = document.createElement('div');
 						item.classList.add('item');
@@ -230,13 +230,16 @@
 						subItem.classList.add('testimony-slide')
 						subItem.classList.add('active')
 						subItem.classList.add('text-center')
-						people = document.createElement('span');
+						people = document.createElement('h4');
+						relation = document.createElement('span');
 						testi = document.createElement('blockquote');
 						paragraph = document.createElement('p');
 						people.textContent = data.data[i].name;
+						relation.textContent = data.data[i].relation;
 						paragraph.textContent = data.data[i].testimony;
 						testi.appendChild(paragraph);
 						subItem.appendChild(people);
+						subItem.appendChild(relation);
 						subItem.appendChild(testi);
 						item.appendChild(subItem);
 						owlDiv.appendChild(item);
