@@ -154,9 +154,7 @@
 	};
 
 	var countdown = function() {
-		// var d = new Date("2022-05-28T08:00:00+07:00");
-
-		var d = new Date(Date.now() + 5000);
+		var d = new Date("2022-05-28T08:00:00+07:00");
 
 		// default example
 		simplyCountdown('.simply-countdown-one', {
@@ -238,9 +236,9 @@
 						relation.textContent = data.data[i].relation;
 						paragraph.textContent = data.data[i].testimony;
 						testi.appendChild(paragraph);
+						subItem.appendChild(testi);
 						subItem.appendChild(people);
 						subItem.appendChild(relation);
-						subItem.appendChild(testi);
 						item.appendChild(subItem);
 						owlDiv.appendChild(item);
 					}
