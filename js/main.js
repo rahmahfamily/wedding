@@ -73,9 +73,7 @@
 	};
 
 	var countdown = function() {
-		// var d = new Date("2022-05-28T07:00:00+07:00");
-
-		var d = new Date(Date.now() + 5000);
+		var d = new Date("2022-05-28T07:00:00+07:00");
 
 		// default example
 		simplyCountdown('.simply-countdown-one', {
