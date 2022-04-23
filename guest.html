@@ -151,7 +151,8 @@
                         <i class="icon-clock"></i>
                         <span>07.00 - 09.00 WIB</span>
                       </div>
-                      <span>Akad nikah hanya dihadiri oleh pihak keluarga</span>
+                      <span>Akad nikah hanya dihadiri keluarga dan kerabat dekat mempelai.</span>
+                      <span>Dapat disaksikan melalui live streaming.</span>
                     </div>
                   </div>
                   <div class="col-md-6 col-sm-6 text-center">
@@ -166,6 +167,8 @@
                         <span>Sesi I: 10.30 - 12.00 WIB</span>
                         <span>Sesi II: 12.00 - 13.30 WIB</span>
                       </div>
+                      <span>Sesi I untuk tamu orang tua mempelai.</span>
+                      <span>Sesi II untuk tamu mempelai.</span>
                     </div>
                   </div>
                 </div>
@@ -199,6 +202,71 @@
           </div>
         </div>
       </div>
+
+			<div id="fh5co-confirm" class="fh5co-bg" style="background-image:url(images/img_couple_color_square_edit2.png);">
+				<div class="overlay"></div>
+				<div class="container" id="formContainer">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<h2>Konfirmasi kehadiran dan salam untuk pengantin</h2>
+							<p>Berikan doa, pesan dan kesan terbaik untuk kedua calon pengantin, serta konfirmasi kehadiran Bapak/Ibu/Saudara/i</p>
+						</div>
+					</div>
+					<div class="row animate-box">
+						<div class="col-md-10 col-md-offset-1">
+							<form action="https://script.google.com/macros/s/AKfycbwk_sGqSLZJem_CExPyUI_4LSpCM4FgbHNd1uBpt2esRhAZUwJ5meaYLECYBmg61mQoqQ/exec" method="post" class="form-inline" id="rsvp">
+								<div class="form-group">
+									<input name="name" class="form-control" id="name" placeholder="Nama" maxlength="30" required>
+								</div>
+								<div class="form-group">
+									<input name="relation" class="form-control" id="relation" placeholder="Kerabat dari ..." required>
+								</div>
+								<div class="form-group">
+									<textarea rows="7" name="testimony" class="form-control" id="testimony" placeholder="Pesan" style="resize: none;"></textarea>
+								</div>
+								<div class="form-group">
+									<select class="form-control" name="attending" id="attending" placeholder="Apakah akan hadir?" required>
+										<option disabled selected value>Apakah akan hadir?</option>
+										<option value="Yes">Ya</option>
+										<option value="No">Tidak</option>
+									</select>
+								</div>
+								<div>
+									<button type="submit" class="btn btn-default btn-block">Submit</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="container" id="responseContainer" style="display: none;">
+					<div class="row animate-box">
+						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+							<h2>Terima kasih telah mengisi.</h2>
+							<p>Atika - Yoga</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="fh5co-testimonial" style="display: none;">
+				<div class="container">
+					<div class="row">
+						<div class="row animate-box">
+							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+								<h2>Pesan dari kerabat</h2>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 animate-box">
+								<div class="wrap-testimony">
+									<div class="owl-carousel-fullwidth" id="owl-testimony">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<div id="fh5co-gallery">
 				<div class="container">
@@ -289,71 +357,6 @@
 									</div>
 								</li>
 								</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="fh5co-confirm" class="fh5co-bg" style="background-image:url(images/img_couple_color_square_edit2.png);">
-				<div class="overlay"></div>
-				<div class="container" id="formContainer">
-					<div class="row animate-box">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Pesan dan Kesan</h2>
-							<p>Berikan doa, pesan dan kesan terbaik untuk kedua calon pengantin</p>
-						</div>
-					</div>
-					<div class="row animate-box">
-						<div class="col-md-10 col-md-offset-1">
-							<form action="https://script.google.com/macros/s/AKfycbwk_sGqSLZJem_CExPyUI_4LSpCM4FgbHNd1uBpt2esRhAZUwJ5meaYLECYBmg61mQoqQ/exec" method="post" class="form-inline" id="rsvp">
-								<div class="form-group">
-									<input name="name" class="form-control" id="name" placeholder="Nama" maxlength="30" required>
-								</div>
-								<div class="form-group">
-									<input name="relation" class="form-control" id="relation" placeholder="Kerabat dari ..." required>
-								</div>
-								<div class="form-group">
-									<textarea rows="7" name="testimony" class="form-control" id="testimony" placeholder="Pesan" style="resize: none;"></textarea>
-								</div>
-								<div class="form-group">
-									<select class="form-control" name="attending" id="attending" placeholder="Apakah akan hadir?" required>
-										<option disabled selected value>Apakah akan hadir?</option>
-										<option value="Yes">Ya</option>
-										<option value="No">Tidak</option>
-									</select>
-								</div>
-								<div>
-									<button type="submit" class="btn btn-default btn-block">Submit</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="container" id="responseContainer" style="display: none;">
-					<div class="row animate-box">
-						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-							<h2>Terima kasih telah mengisi :)</h2>
-							<p>Salam hangat dari kami.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div id="fh5co-testimonial" style="display: none;">
-				<div class="container">
-					<div class="row">
-						<div class="row animate-box">
-							<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-								<h2>Pesan dari kerabat</h2>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 animate-box">
-								<div class="wrap-testimony">
-									<div class="owl-carousel-fullwidth" id="owl-testimony">
-									</div>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
