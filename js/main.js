@@ -94,8 +94,8 @@
 	};
 
 	var formSubmission = function() {
-		var responseContainer = document.getElementById('responseContainer');
-		var formContainer = document.getElementById('formContainer');
+		var responseContainer = document.getElementById('response-container');
+		var formContainer = document.getElementById('form-container');
 		window.addEventListener("load", function() {
 			const form = document.getElementById('rsvp');
 			form.addEventListener("submit", function(e) {
@@ -136,7 +136,7 @@
 			dataType: 'json',
 			success: function(data) {
 				if (data.data.length > 0) {
-					var testi = document.getElementById('fh5co-testimonial')
+					var testi = document.getElementById('messages')
 					testi.style.display = 'block';
 					for (var i in data.data) {
 						var item, subItem, people, testi, paragraph, relation;
