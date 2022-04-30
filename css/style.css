@@ -412,9 +412,11 @@ h1, h2, h3, h4, h5, h6, figure {
 #wishlist-list li {
   display: block;
   padding: 0;
-  margin: 0 0 10px 1%;
+  margin: 1.25%;
   list-style: none;
-  min-height: 400px;
+  width: 47.5%;
+  height: 0;
+  padding-bottom: 47.5%;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -429,13 +431,16 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 480px) {
   #wishlist-list li {
     margin-left: 0;
+    height: 100%;
+    padding-bottom: 0px;
   }
 }
 #wishlist-list li a {
-  min-height: 400px;
-  padding: 2em;
+  padding: 8%;
   position: relative;
   width: 100%;
+  height: 0;
+  padding-bottom: 92%;
   display: block;
 }
 #wishlist-list li a:before {
@@ -489,7 +494,6 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #wishlist-list li.one-third {
-  width: 49%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -934,75 +938,6 @@ form label {
   margin-bottom: 0;
 }
 
-#closing {
-  position: relative;
-}
-#closing .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-}
-#closing .fh5co-heading h2 {
-  color: #fff;
-}
-#closing .fh5co-heading p {
-  color: rgba(255, 255, 255, 0.5);
-}
-#closing .form-control {
-  background: rgba(255, 255, 255, 0.2);
-  border: none !important;
-  color: #fff;
-  font-size: 16px !important;
-  width: 100%;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-#closing .form-control::-webkit-input-placeholder {
-  color: #fff;
-}
-#closing .form-control:-moz-placeholder {
-  /* Firefox 18- */
-  color: #fff;
-}
-#closing .form-control::-moz-placeholder {
-  /* Firefox 19+ */
-  color: #fff;
-}
-#closing .form-control:-ms-input-placeholder {
-  color: #fff;
-}
-#closing .form-control:focus {
-  background: rgba(255, 255, 255, 0.3);
-}
-#closing .btn {
-  height: 54px;
-  border: none !important;
-  background: #d3a497;
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: 400;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-#closing .form-inline .form-group {
-  width: 100% !important;
-  margin-bottom: 10px;
-}
-#closing .form-inline .form-group .form-control {
-  width: 100%;
-}
-#closing .fh5co-heading {
-  margin-bottom: 30px;
-}
-#closing .fh5co-heading h2 {
-  margin-bottom: 0;
-}
-
 @media screen and (max-width: 768px) {
   #footer .copyright .pull-left,
   #footer .copyright .pull-right {
@@ -1284,7 +1219,7 @@ form label {
 }
 
 .collapsible-content {
-  padding: 0 18px;
+  padding: 0 5px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
